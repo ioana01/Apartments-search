@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Imobiliare</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script>
+
+            function myFunction() {
+
+                var data = new URL(`${window.location.href}`).pathname;
+
+                // $.get(`www.imobiliare.ro/vanzare-apartamente/bucuresti/militari`, data,
+                // // https://cors-anywhere.herokuapp.com/
+                //     function(data, status){
+                //         alert("Data: " + data + "\nStatus: " + status);
+
+                // });
+            }
+            
+        </script>
+    </head>
+    <body onload="myFunction()">
+        <h1>Welcome to <%= area %></h1>
+        
+    </body>
+</html>

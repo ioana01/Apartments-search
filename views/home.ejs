@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Imobiliare</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script>
+            $(document).ready(function() {
+                $('form').on('submit', function() {
+                    var area = $('form input');
+                    var data = {area: area.val()};
+
+                    window.location = window.location.origin + "/" + data.area;
+
+                    // $.post("/", data,
+                    // function(data, status){
+                    //     // alert("Data: " + data + "\nStatus: " + status);
+                    //     location.reload();
+                    // });
+
+                    // $.get("/dristor", data,
+                    // function(data, status){
+                    //     alert("Data: " + data + "\nStatus: " + status);
+                    //     // location.reload();
+                        
+                    // });
+
+
+
+                    return false;
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <div>
+            <form>
+                <input type="text" placeholder="Type an area">
+                <button type="submit">Search</button>
+            </form>
+            <ul>
+                <% for(var i = 0; i < areas.length; i++){ %>
+                    <li><%= areas[i].area %></li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
